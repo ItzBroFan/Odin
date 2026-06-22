@@ -42,7 +42,7 @@ object BlazeSolver {
         if (blazes.isEmpty() && lastBlazeCount == 1) {
             DungeonListener.puzzles.find { it == Puzzle.BLAZE }?.status = PuzzleStatus.Completed
             onPuzzleComplete(DungeonUtils.currentRoomName)
-            if (blazeSendComplete) sendCommand("pc Blaze puzzle solved!")
+            if (blazeSendComplete) sendCommand("pc Blaze done!")
             lastBlazeCount = 0
             return
         }
